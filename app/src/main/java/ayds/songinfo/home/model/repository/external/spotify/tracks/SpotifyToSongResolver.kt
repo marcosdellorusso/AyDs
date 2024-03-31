@@ -27,7 +27,6 @@ internal class JsonToSongResolver : SpotifyToSongResolver {
     override fun getSongFromExternalData(serviceData: String?): SpotifySong? =
         try {
             serviceData?.getFirstItem()?.let { item ->
-                Log.d("ReleaseDatePrecision","${item.getReleaseDatePrecision()}")
                 SpotifySong(
                   item.getId(), item.getSongName(), item.getArtistName(), item.getAlbumName(),
                   item.getReleaseDate(), item.getReleaseDatePrecision(),
