@@ -1,5 +1,6 @@
 package ayds.songinfo.home.model.repository.external.spotify.tracks
 
+import android.util.Log
 import com.google.gson.Gson
 import ayds.songinfo.home.model.entities.Song.SpotifySong
 import com.google.gson.JsonObject
@@ -16,6 +17,7 @@ private const val ARTISTS = "artists"
 private const val ALBUM = "album"
 private const val IMAGES = "images"
 private const val RELEASE_DATE = "release_date"
+private const val RELEASE_DATE_PRECISION = "release_date_precision"
 private const val URL = "url"
 private const val EXTERNAL_URL = "external_urls"
 private const val SPOTIFY = "spotify"
@@ -25,9 +27,11 @@ internal class JsonToSongResolver : SpotifyToSongResolver {
     override fun getSongFromExternalData(serviceData: String?): SpotifySong? =
         try {
             serviceData?.getFirstItem()?.let { item ->
+                Log.d("ReleaseDatePrecision","${item.getReleaseDatePrecision()}")
                 SpotifySong(
                   item.getId(), item.getSongName(), item.getArtistName(), item.getAlbumName(),
-                  item.getReleaseDate(), item.getSpotifyUrl(), item.getImageUrl()
+                  item.getReleaseDate(), item.getReleaseDatePrecision(),
+                    item.getSpotifyUrl(), item.getImageUrl()
                 )
             }
         } catch (e: Exception) {
@@ -60,6 +64,10 @@ internal class JsonToSongResolver : SpotifyToSongResolver {
         return album[RELEASE_DATE].asString
     }
 
+    private fun JsonObject.getReleaseDatePrecision(): String {
+        val album = this[ALBUM].asJsonObject
+        return album[RELEASE_DATE_PRECISION].asString
+    }
     private fun JsonObject.getImageUrl(): String {
         val album = this[ALBUM].asJsonObject
         return album[IMAGES].asJsonArray[1].asJsonObject[URL].asString
