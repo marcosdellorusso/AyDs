@@ -1,5 +1,6 @@
 package ayds.songinfo.home.view
 
+import android.util.Log
 import ayds.songinfo.home.model.entities.Song.EmptySong
 import ayds.songinfo.home.model.entities.Song
 import ayds.songinfo.home.model.entities.Song.SpotifySong
@@ -10,6 +11,7 @@ interface SongDescriptionHelper {
 
 internal class SongDescriptionHelperImpl : SongDescriptionHelper {
     override fun getSongDescriptionText(song: Song): String {
+
         return when (song) {
             is SpotifySong ->
                 "${
@@ -18,7 +20,7 @@ internal class SongDescriptionHelperImpl : SongDescriptionHelper {
                 }\n" +
                         "Artist: ${song.artistName}\n" +
                         "Album: ${song.albumName}\n" +
-                        "Year: ${song.year}"
+                        "Release Date: ${song.date}"
             else -> "Song not found"
         }
     }
