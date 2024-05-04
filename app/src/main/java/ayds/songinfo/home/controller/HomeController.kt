@@ -35,18 +35,11 @@ internal class HomeControllerImpl(
             }
         }
 
-    //Cual de las dos dejo?
-    /*private fun searchSong() {
+    private fun searchSong() {
         // Warning: Never use Thread in android! Use coroutines
         Thread {
             homeModel.searchSong(homeView.uiState.searchTerm)
         }.start()
-    }*/
-    private fun searchSong() {
-        // Utilizando coroutines
-        CoroutineScope(Dispatchers.IO).launch {
-            homeModel.searchSong(homeView.uiState.searchTerm)
-        }
     }
 
 

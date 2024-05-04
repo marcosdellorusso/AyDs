@@ -9,7 +9,7 @@ interface SongDescriptionHelper {
     fun getSongDescriptionText(song: Song = EmptySong): String
 }
 
-internal class SongDescriptionHelperImpl : SongDescriptionHelper {
+internal class SongDescriptionHelperImpl(private val releaseDateResolverFactory: ReleaseDateResolverFactory) : SongDescriptionHelper {
     override fun getSongDescriptionText(song: Song): String {
 
         return when (song) {
@@ -20,7 +20,9 @@ internal class SongDescriptionHelperImpl : SongDescriptionHelper {
                 }\n" +
                         "Artist: ${song.artistName}\n" +
                         "Album: ${song.albumName}\n" +
-                        "Release Date: ${song.date}"
+                        "Release Date: ${
+                            releaseDateResolverFactory.getReleaseDateResolver(song).getReleaseDate()
+                        }"
             else -> "Song not found"
         }
     }

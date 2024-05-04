@@ -16,26 +16,7 @@ sealed class Song {
         val spotifyUrl: String,
         val imageUrl: String,
         var isLocallyStored: Boolean = false
-    ) : Song() {
-
-        //Tal vez tendria que guardar un String en date
-        //Tal vez hacer una funcion para esto
-        val date: String = when (releaseDatePrecision) {
-            "day" -> {
-                val parsedDate = LocalDate.parse(releaseDate)
-                parsedDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-            }
-            "month" -> {
-                val parsedDate = YearMonth.parse(releaseDate, DateTimeFormatter.ofPattern("yyyy-MM"))
-                parsedDate.format(DateTimeFormatter.ofPattern("MMMM, yyyy"))
-            }
-            "year" -> {
-                val parsedYear = releaseDate.toIntOrNull() ?: throw IllegalArgumentException("Invalid year format: $releaseDate")
-                "$parsedYear${if (!Year.isLeap(parsedYear.toLong())) " (not a leap year)" else ""}"
-            }
-            else -> throw IllegalArgumentException("Unknown precision: $releaseDatePrecision")
-        }
-    }
+    ) : Song() {}
 
     object EmptySong : Song()
 }
