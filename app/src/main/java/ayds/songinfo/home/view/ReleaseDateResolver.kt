@@ -43,7 +43,7 @@ internal class ReleaseDateMonthResolver(override val song: Song.SpotifySong) : R
 internal class ReleaseDateYearResolver(override val song: Song.SpotifySong) : ReleaseDateResolver {
     override fun getReleaseDate(): String {
         val parsedYear = song.releaseDate.toIntOrNull() ?: throw IllegalArgumentException("Invalid year format: $song.releaseDate")
-        return "$parsedYear${if (!Year.isLeap(parsedYear.toLong())) " (not a leap year)" else ""}"
+        return "$parsedYear${if (!Year.isLeap(parsedYear.toLong())) " (not a leap year)" else " (leap year)"}"
     }
 }
 

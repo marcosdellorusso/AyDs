@@ -1,9 +1,10 @@
 package ayds.songinfo.home.model
 
-import ayds.songinfo.home.model.entities.Song
-import ayds.songinfo.home.model.repository.SongRepository
 import ayds.observer.Observable
 import ayds.observer.Subject
+import ayds.songinfo.home.model.entities.Song
+import ayds.songinfo.home.model.repository.SongRepository
+
 
 interface  HomeModel {
 

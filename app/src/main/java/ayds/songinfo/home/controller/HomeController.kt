@@ -1,14 +1,10 @@
 package ayds.songinfo.home.controller
 
-import android.util.Log
 import ayds.observer.Observer
 import ayds.songinfo.home.model.HomeModel
 import ayds.songinfo.home.model.entities.Song
 import ayds.songinfo.home.view.HomeUiEvent
 import ayds.songinfo.home.view.HomeView
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 interface HomeController {
 
@@ -17,7 +13,7 @@ interface HomeController {
 
 internal class HomeControllerImpl(
     private val homeModel: HomeModel
-) : ayds.songinfo.home.controller.HomeController {
+) : HomeController {
 
     private lateinit var homeView: HomeView
 

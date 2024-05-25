@@ -1,8 +1,7 @@
 package ayds.songinfo.home.view
 
-import android.util.Log
-import ayds.songinfo.home.model.entities.Song.EmptySong
 import ayds.songinfo.home.model.entities.Song
+import ayds.songinfo.home.model.entities.Song.EmptySong
 import ayds.songinfo.home.model.entities.Song.SpotifySong
 
 interface SongDescriptionHelper {
@@ -20,7 +19,7 @@ internal class SongDescriptionHelperImpl(private val releaseDateResolverFactory:
                 }\n" +
                         "Artist: ${song.artistName}\n" +
                         "Album: ${song.albumName}\n" +
-                        "Release Date: ${
+                        "Release date: ${
                             releaseDateResolverFactory.getReleaseDateResolver(song).getReleaseDate()
                         }"
             else -> "Song not found"

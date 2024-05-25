@@ -1,7 +1,7 @@
 package ayds.songinfo.home.model.repository
 
-import ayds.songinfo.home.model.entities.Song.EmptySong
 import ayds.songinfo.home.model.entities.Song
+import ayds.songinfo.home.model.entities.Song.EmptySong
 import ayds.songinfo.home.model.entities.Song.SpotifySong
 import ayds.songinfo.home.model.repository.external.spotify.SpotifyTrackService
 import ayds.songinfo.home.model.repository.local.spotify.SpotifyLocalStorage
@@ -25,7 +25,7 @@ internal class SongRepositoryImpl(
                 try {
                     spotifySong = spotifyTrackService.getSong(term)
 
-                    (spotifySong as? SpotifySong)?.let {
+                    spotifySong?.let {
                         when {
                             it.isSavedSong() -> spotifyLocalStorage.updateSongTerm(term, it.id)
                             else -> spotifyLocalStorage.insertSong(term, it)
