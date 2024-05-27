@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="061acbd2-74a9-4531-a83b-16e26fa38806" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/controller/HomeControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/controller/HomeController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/controller/HomeController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/model/HomeModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/model/HomeModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/model/repository/SongRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/model/repository/SongRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/view/ReleaseDateResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ayds/songinfo/home/view/ReleaseDateResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../external/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../external/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../observer/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../observer/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../observer/src/androidTest/java/ayds/observer/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../observer/src/androidTest/java/ayds/observer/ExampleInstrumentedTest.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2ghnGHnpMFZmZa1Sf14mzj7mlRh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="061acbd2-74a9-4531-a83b-16e26fa38806" name="Changes" comment="" />
+      <created>1716158580978</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716158580978</updated>
+    </task>
+    <servers />
+  </component>
+</project>
