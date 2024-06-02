@@ -1,25 +1,25 @@
 package ayds.songinfo.moredetails.data.local
-
-import ayds.songinfo.moredetails.domain.ArtistBiography
+import ayds.songinfo.moredetails.domain.Card
+import ayds.songinfo.moredetails.domain.CardSource
 
 interface OtherInfoLocalStorage {
-    fun getArticle(artistName: String): ArtistBiography?
-    fun insertArtist(artistBiography: ArtistBiography)
+    fun getCard(artistName: String): Card?
+    fun insertCard(card: Card)
 }
 internal class OtherInfoLocalStorageImpl(
-    private val articleDatabase: ArticleDatabase,
+    private val cardDatabase: CardDatabase,
 ) : OtherInfoLocalStorage {
 
-    override fun getArticle(artistName: String): ArtistBiography? {
-        val artistEntity = articleDatabase.ArticleDao().getArticleByArtistName(artistName)
-        return artistEntity?.let {
-            ArtistBiography(artistName, artistEntity.biography, artistEntity.articleUrl)
+    override fun getCard(artistName: String): Card? {
+        val cardEntity = cardDatabase.CardDao().getCardByArtistName(artistName)
+        return cardEntity?.let {
+            Card(artistName, cardEntity.content, cardEntity.url, CardSource.entries[cardEntity.source] )
         }
     }
-    override fun insertArtist(artistBiography: ArtistBiography) {
-        articleDatabase.ArticleDao().insertArticle(
-            ArticleEntity(
-                artistBiography.artistName, artistBiography.biography, artistBiography.articleUrl
+    override fun insertCard(card: Card) {
+        cardDatabase.CardDao().insertCard(
+            CardEntity(
+                card.artistName, card.text, card.url, card.source.ordinal
             )
         )
     }
